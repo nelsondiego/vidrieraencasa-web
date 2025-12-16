@@ -22,7 +22,7 @@ import { registerUser } from "@/actions/auth/register-user";
 
 const registrationSchema = z.object({
   fullName: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
-  email: z.string().email("Por favor, ingresa un correo electrónico válido"),
+  email: z.email("Por favor, ingresa un correo electrónico válido"),
   password: z.string().min(8, "La contraseña debe tener al menos 8 caracteres"),
 });
 
